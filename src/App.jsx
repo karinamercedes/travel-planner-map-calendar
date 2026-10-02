@@ -55,7 +55,6 @@ export default function App() {
       <h1 className="print-only">{trip.city ? `${trip.city}: ` : ''}{trip.numDays}-day plan</h1>
 
       <div className="no-print">
-        <MapView places={places} />
 
         <section className="section">
           <h2>Your trip</h2>
@@ -63,7 +62,9 @@ export default function App() {
           <PlaceForm onAdd={addPlace} city={trip.city} />
           <FeasibilityBanner result={feasibility} trip={trip} onChangeTrip={setTrip} onDeletePlace={deletePlace} />
         </section>
-
+        
+        <MapView places={places} />
+        
         <div className="plan-controls">
           <PlanControls
             status={feasibility.status}
