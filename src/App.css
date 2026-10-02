@@ -144,10 +144,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-input[type="startdate"] {
+input[type="startDate"] {
   cursor: pointer;
 }
-input[type="startdate"]::-webkit-calendar-picker-indicator {
+input[type="startDate"]::-webkit-calendar-picker-indicator {
   filter: invert(1) brightness(1.6);
   cursor: pointer;
 }
