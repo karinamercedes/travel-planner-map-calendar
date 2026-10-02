@@ -30,7 +30,7 @@ export default function TripForm({ trip, onChange }) {
             value={trip.startDate}
             onChange={handleChange}
             onClick={openDatePicker}
-            readOnly
+            onFocus={openDatePicker}
           />
         </label>
         <label>
