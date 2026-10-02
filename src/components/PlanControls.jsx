@@ -16,15 +16,15 @@ export default function PlanControls({ status, planned, hasPlaces, onPlan, onCle
 
   if (planned) {
     return (
-      <div className="plan-controls">
-        <button type="button" onClick={onClear}>Clear plan</button>
-      </div>
+      <button type="button" className="primary full-width" onClick={onClear}>
+        Clear plan
+      </button>
     )
   }
 
   return (
-    <div className="plan-controls">
-      <button type="button" className="primary" onClick={handleClick} disabled={!hasPlaces}>
+    <>
+      <button type="button" className="primary full-width" onClick={handleClick} disabled={!hasPlaces}>
         Plan my trip
       </button>
       <dialog ref={dialogRef}>
@@ -38,6 +38,6 @@ export default function PlanControls({ status, planned, hasPlaces, onPlan, onCle
           <button type="button" className="primary" onClick={planAnyway}>Plan anyway</button>
         </div>
       </dialog>
-    </div>
+    </>
   )
 }
