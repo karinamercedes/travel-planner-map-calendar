@@ -1,8 +1,14 @@
 export default function TripForm({ trip, onChange }) {
-  // One handler for every field: the input's "name" tells us which property to update.
   function handleChange(e) {
     const { name, value } = e.target
     onChange({ ...trip, [name]: name === 'numDays' ? Number(value) : value })
+  }
+
+  // Opens the native calendar as soon as the field is clicked, instead of
+  // letting the user type into it. showPicker() is supported in Chrome,
+  // Edge and newer Firefox; older Safari just falls back to normal typing.
+  function openDatePicker(e) {
+    if (e.target.showPicker) e.target.showPicker()
   }
 
   return (
@@ -18,7 +24,14 @@ export default function TripForm({ trip, onChange }) {
         </label>
         <label>
           Start date
-          <input name="startDate" type="date" value={trip.startDate} onChange={handleChange} />
+          <input
+            name="startDate"
+            type="date"
+            value={trip.startDate}
+            onChange={handleChange}
+            onClick={openDatePicker}
+            readOnly
+          />
         </label>
         <label>
           Pace
