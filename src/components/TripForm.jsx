@@ -45,3 +45,11 @@ export default function TripForm({ trip, onChange }) {
     </section>
   )
 }
+
+input[type="date"] {
+  cursor: pointer;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.6);
+  cursor: pointer;
+}
