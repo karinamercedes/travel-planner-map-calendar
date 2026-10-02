@@ -72,7 +72,7 @@ export default function App() {
             onPlan={() => setPlanned(true)}
             onClear={() => setPlanned(false)}
           />
-          <button type="button" className="ghost" onClick={resetTrip}>Reset</button>
+          <button type="button" className="link-reset" onClick={resetTrip}>Reset</button>
         </div>
       </div>
 
