@@ -150,4 +150,5 @@ input[type="startDate"] {
 input[type="startDate"]::-webkit-calendar-picker-indicator {
   filter: invert(1) brightness(1.6);
   cursor: pointer;
+  opacity: 1;
 }
